@@ -11,7 +11,7 @@ int main() {
     float area1 = 0.0;
     float PIB1 = 0.0;
     int pontosTuristicos1 = 0;
-      float SUPER_PODER1 = 0.0;
+    float SUPER_PODER1 = 0.0;
     // Entrada de dados
     printf("Digite uma letra de 'A' a 'H' Para o Estado:\n");
     scanf("%c", &estado1);
