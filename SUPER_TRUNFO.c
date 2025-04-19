@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 int main() {
@@ -102,7 +103,6 @@ int main() {
   float PIBpercapita2 = PIB2 / populacao2;
   printf ("PIB per capita: %.2f\n", PIBpercapita2);
   printf ("\n");
-  
 float SUPER_PODER1= populacao2 + area2 + PIB2 + pontosTuristicos2 + PIBpercapita2 - densidade2 ;
 
 //COMPARAÇÃO ENTRE AS CARTAS
