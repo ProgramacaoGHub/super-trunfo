@@ -17,6 +17,7 @@ int main() {
     float PIB1 = 0.0;
     int pontosTuristicos1 = 0;
     int opcao1, opcao2;  
+    int resultado1, resultado2;
     //float SUPER_PODER1 = 0.0;
 
     // Entrada de dados
@@ -148,174 +149,89 @@ printf("%s vs %s\n", cidade1, cidade2);
 
 // Comparação das cartas opção1
 switch(opcao1) {
-    case 0:
-        printf("Comparando Nome da Cidade:\n");
-        printf("CARTA 1 = %s vs CARTA 2 = %s\n", cidade1, cidade2);
-        if (strcmp(cidade1, cidade2) > 0) {
-            printf("VITORIA CARTA 1 !\n");
-        } else if (strcmp(cidade1, cidade2) < 0) {
-            printf("VITORIA CARTA 2!\n");
-        } else {
-            printf("EMPATE.\n");
-        }
+    case 1:
+    printf("voce escolheu Nome da Cidade\n");
+    printf("CARTA 1 = %s vs CARTA 2 = %s\n", cidade1, cidade2);
+    resultado1= cidade1 > cidade2 ? 1:0;
         break;
-  case 1:
-  printf("VITORIA CARTA 1 !\n");
-  if (strcmp(cidade1, cidade2) == 0) {
-      printf("VITORIA CARTA 2!  %s vs %s\n");
-  } else {
-      //printf(" %s vs %s\n", cidade1, cidade2);
-  }
-  break;
-    case 2:
-        printf("Comparando População:\n");
-        printf("CARTA 1 = %d vs CARTA 2 = %d\n", populacao1, populacao2);
-        if (populacao1 > populacao2) {
-            printf("VITORIA CARTA 1 !\n");
-        } else if (populacao1 < populacao2) {
-            printf("VITORIA CARTA 2!\n");
-        } else {
-            printf("EMPATE.\n");
-        }
-        break;
+     case 2:
+     printf("voce escolheu População\n");
+     printf("CARTA 1 = %d vs CARTA 2 = %d\n", populacao1, populacao2);
+    resultado1= populacao1 > populacao2 ? 1:0;
+    break;
     case 3:
-        printf("Comparando Área:\n");
-        printf("CARTA 1 = %f vs CARTA 2 = %f\n", area1, area2);
-        if (area1 > area2) {
-            printf("VITORIA CARTA 1!\n");
-        } else if (area1 < area2) {
-            printf("VITORIA CARTA 2!\n");
-        } else {
-            printf("EMPATE.\n");
-        }
+    printf("voce escolheu Área\n");
+    printf("CARTA 1 = %.2f vs CARTA 2 = %.2f\n", area1, area2);
+    resultado1=     area1 > area2 ? 1:0;
         break;
     case 4:
-        printf("Comparando PIB:\n");
-        printf("CARTA 1 = %f vs CARTA 2 = %f\n", PIB1, PIB2);
-        if (PIB1 > PIB2) {
-            printf("VITORIA CARTA 1! \n");
-        } else if (PIB1 < PIB2) {
-            printf("VITORIA CARTA 2! \n");
-        } else {
-            printf("EMPATE.\n");
-        }
+    printf("voce escolheu PIB\n");
+    printf("CARTA 1 = %.2f vs CARTA 2 = %.2f\n", PIB1, PIB2);
+    resultado1=   PIB1 > PIB2 ? 1:0;
         break;
     case 5:
-        printf("Comparando Número de Pontos Turísticos:\n");
-        printf("CARTA 1 = %d vs CARTA 2 = %d\n", pontosTuristicos1, pontosTuristicos2);
-        if (pontosTuristicos1 > pontosTuristicos2) {
-            printf("VITORIA CARTA 1!\n");
-        } else if (pontosTuristicos1 < pontosTuristicos2) {
-            printf("VITORIA CARTA 2!\n");
-        } else {
-            printf("EMPATE.\n");
-        }
+    printf("voce escolheu Pontos Turisticos\n");
+    printf("CARTA 1 = %d vs CARTA 2 = %d\n", pontosTuristicos1, pontosTuristicos2);
+    resultado1=   pontosTuristicos1 > pontosTuristicos2 ? 1:0;
         break;
     case 6:
-        printf("Comparando Densidade Demográfica:\n");
-        printf("CARTA 1 = %f vs CARTA 2 = %f\n", densidade1, densidade2);
-        if (densidade1 < densidade2) {
-            printf("VITORIA CARTA 1!\n");
-        } else if (densidade1 > densidade2) {
-            printf("VITORIA CARTA 2!\n");
-        } else {
-            printf("EMPATE.\n");
-        }
-        printf("\n");
- }
- switch(opcao2) {
-    case 0:
-        printf("Comparando Nome da Cidade:\n");
-        printf("CARTA 1 = %s vs CARTA 2 = %s\n", cidade1, cidade2);
-        if (strcmp(cidade1, cidade2) > 0) {
-            printf("VITORIA CARTA 1 !\n");
-        } else if (strcmp(cidade1, cidade2) < 0) {
-            printf("VITORIA CARTA 2!\n");
-        } else {
-            printf("EMPATE.\n");
-        }
+    printf("voce escolheu Densidade\n");
+    printf("CARTA 1 = %.2f vs CARTA 2 = %.2f\n", densidade1, densidade2);
+    resultado1 =  densidade1 < densidade2 ? 1:0;
         break;
-  case 1:
-  printf("VITORIA CARTA 1 !\n");
-  if (strcmp(cidade1, cidade2) == 0) {
-      printf("VITORIA CARTA 2!  %s vs %s\n");
-  } else {
-      //printf(" %s vs %s\n", cidade1, cidade2);
-  }
-  break;
-    case 2:
-        printf("Comparando População:\n");
-        printf("CARTA 1 = %d vs CARTA 2 = %d\n", populacao1, populacao2);
-        if (populacao1 > populacao2) {
-            printf("VITORIA CARTA 1 !\n");
-        } else if (populacao1 < populacao2) {
-            printf("VITORIA CARTA 2!\n");
-        } else {
-            printf("EMPATE.\n");
-        }
+    default:
+    resultado1=  printf("Opção inválida.\n");
+        break;
+}
+
+
+// Comparação das cartas opção2
+switch(opcao2) {
+    case 1:
+    printf("voce escolheu Nome da Cidade\n");
+    printf("CARTA 1 = %s vs CARTA 2 = %s\n", cidade1, cidade2);
+    resultado2= cidade1 > cidade2 ? 1:0;
+        break;
+     case 2:
+     printf("voce escolheu População\n");
+     printf("CARTA 1 = %d vs CARTA 2 = %d\n", populacao1, populacao2);
+    resultado2= populacao1 > populacao2 ? 1:0;
+    break;
         break;
     case 3:
-        printf("Comparando Área:\n");
-        printf("CARTA 1 = %f vs CARTA 2 = %f\n", area1, area2);
-        if (area1 > area2) {
-            printf("VITORIA CARTA 1!\n");
-        } else if (area1 < area2) {
-            printf("VITORIA CARTA 2!\n");
-        } else {
-            printf("EMPATE.\n");
-        }
+    printf("voce escolheu Área\n");
+    printf("CARTA 1 = %.2f vs CARTA 2 = %.2f\n", area1, area2);
+    resultado2=     area1 > area2 ? 1:0;
         break;
     case 4:
-        printf("Comparando PIB:\n");
-        printf("CARTA 1 = %f vs CARTA 2 = %f\n", PIB1, PIB2);
-        if (PIB1 > PIB2) {
-            printf("VITORIA CARTA 1! \n");
-        } else if (PIB1 < PIB2) {
-            printf("VITORIA CARTA 2! \n");
-        } else {
-            printf("EMPATE.\n");
-        }
+    printf("voce escolheu PIB\n");
+    printf("CARTA 1 = %.2f vs CARTA 2 = %.2f\n", PIB1, PIB2);
+    resultado2=   PIB1 > PIB2 ? 1:0;
         break;
     case 5:
-        printf("Comparando Número de Pontos Turísticos:\n");
-        printf("CARTA 1 = %d vs CARTA 2 = %d\n", pontosTuristicos1, pontosTuristicos2);
-        if (pontosTuristicos1 > pontosTuristicos2) {
-            printf("VITORIA CARTA 1!\n");
-        } else if (pontosTuristicos1 < pontosTuristicos2) {
-            printf("VITORIA CARTA 2!\n");
-        } else {
-            printf("EMPATE.\n");
-        }
+    printf("voce escolheu Pontos Turisticos\n");
+    printf("CARTA 1 = %d vs CARTA 2 = %d\n", pontosTuristicos1, pontosTuristicos2);
+    resultado2=   pontosTuristicos1 > pontosTuristicos2 ? 1:0;
         break;
     case 6:
-        printf("Comparando Densidade Demográfica:\n");
-        printf("CARTA 1 = %f vs CARTA 2 = %f\n", densidade1, densidade2);
-        if (densidade1 < densidade2) {
-            printf("VITORIA CARTA 1!\n");
-        } else if (densidade1 > densidade2) {
-            printf("VITORIA CARTA 2!\n");
-        } else {
-            printf("EMPATE.\n");
-        }
+    printf("voce escolheu Densidade\n");
+    printf("CARTA 1 = %.2f vs CARTA 2 = %.2f\n", densidade1, densidade2);
+    resultado2 =  densidade1 < densidade2 ? 1:0;
+        break;
+    default:
+    resultado2=  printf("Opção inválida.\n");
+        break;
+}
 
- }
-        printf("\n");
+if(resultado1 && resultado2 ) {
+    printf("A carta 1 VENCEU!\n");
+} else if(resultado1 !=resultado2 ) {
+    printf("EMPATOU!\n");
+} else {
+    printf(" A carta 2 VENCEU!!.\n");
+}
 
-         // CARTA VENCEDORA DEFINITIVA
-        // A carta vencedora é a que tem o maior valor na soma dos atributos!
-        float SUPER_PODER1= populacao1 + area1 + PIB1 + pontosTuristicos1 + PIBpercapita1 - densidade1 ;
-        float SUPER_PODER2= populacao2 + area2 + PIB2 + pontosTuristicos2 + PIBpercapita2 - densidade2 ;
-        printf("SUPER PODER CARTA 1: %.2f vs SUPER PODER CARTA 2: %.2f\n", SUPER_PODER1,SUPER_PODER1);
-        printf("Carta VENCEDORA da rodada com o MAIOR valor é: ");  
 
-        if(SUPER_PODER1 > SUPER_PODER2) {
-            printf("CARTA 1 !\n");
-        } else if (SUPER_PODER1 < SUPER_PODER2) {
-            printf("CARTA 2 \n");
-        } else {
-            printf("EMPATE.\n");
-        }
-        
-    
+
 return 0;
 }
